@@ -1,4 +1,4 @@
-This is an Erlang implementation of the genetic typographic system from Godel, Escher, Bach.
+This is an Erlang implementation of the genetic typographic system from *Gödel, Escher, Bach*.
 
 This is a formal system whose input is some string of characters. The characters can be any genetic base (acgt). The goal is to replicate the input so that if you input some string [aattccgg] you get that two of that exact string as the output [aattccgg, aattccgg]. Since it is a formal system, the rules are precise. However, ultimately this is a system designed to explore the incompleteness theorem, so the rules can get hazy regarding edge cases.
 
