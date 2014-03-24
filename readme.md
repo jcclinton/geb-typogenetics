@@ -1,6 +1,6 @@
 This is an Erlang implementation of the genetic typographic system from *Gödel, Escher, Bach*.
 
-This is a formal system whose input is some string of characters. The characters can be any genetic base (acgt). The goal is to replicate the input so that if you input some string [aattccgg] you get that two of that exact string as the output [aattccgg, aattccgg]. Since it is a formal system, the rules are precise. However, ultimately this is a system designed to explore the incompleteness theorem, so the rules can get hazy regarding edge cases.
+This is a formal system whose input is some string of characters. The characters can be any genetic base (acgt). The goal is to replicate the input so that if you input some string *eg: [aattccgg]* you get two of that exact string as the output *[aattccgg, aattccgg]*. Since it is a formal system, the rules are precise. However, ultimately this is a system designed to explore the incompleteness theorem, so the rules can get hazy regarding edge cases.
 
 #Purpose:
 This may seem like a strange system to program in Erlang. It doesn't involve routing, networking, etc and it is not a soft real time application. However it turned out to be a very natural fit because you could spawn off a process for each input string that you want to check. The gen\_server was a very natural fit for doing the actual rules processing as well since you could write each rule as an async request, which makes the structure simple and gives you a built-in abstraction.
